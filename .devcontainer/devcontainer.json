@@ -1,0 +1,37 @@
+// See https://aka.ms/vscode-remote/devcontainer.json for format details.
+{
+	// See https://aka.ms/vscode-remote/devcontainer.json for format details.
+	"name": "Devilbox",
+
+	// Update the 'dockerComposeFile' list if you have more compose files or use different names.
+	// The .devcontainer/docker-compose.yml file contains any overrides you need/want to make.
+	"dockerComposeFile": [
+		"../../../../../docker-compose.yml" // Point to Devilbox's docker-compose.yml
+	],
+
+	// The 'service' property is the name of the service for the container that VS Code should
+	// use. Update this value and .devcontainer/docker-compose.yml to the real service name.
+	"service": "php", // Name of the service we want to remote to
+
+	// The optional 'workspaceFolder' property is the path VS Code should open by default when
+	// connected. This is typically a file mount in .devcontainer/docker-compose.yml
+	"workspaceFolder": "/shared/httpd/pdv", // For example: /shared/httpd/my-website
+
+	// Uncomment the next line if you want to keep your containers running after VS Code shuts down.
+	// "shutdownAction": "none",
+
+	// Uncomment the next line if you want to add in default container specific settings.json values
+	// "settings":  { "workbench.colorTheme": "Quiet Light" },
+
+	// Uncomment the next line to run commands after the container is created - for example installing git.
+	// "postCreateCommand": "apt-get update && apt-get install -y git",
+
+	// Add the IDs of any extensions you want installed in the array below.
+	"extensions": [
+            "eamodio.gitlens",
+            "felixfbecker.php-debug",
+            "felixfbecker.php-intellisense",
+            "fterrag.vscode-php-cs-fixer",
+            "atlassian.atlascode"
+    ],
+}
